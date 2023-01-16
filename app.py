@@ -42,6 +42,7 @@ def create():
     else:
         return render_template('create.html')
 
+
 @app.route('/home')
 def posts():
     articles = Article.query.order_by(Article.date.desc()).all() #или first если нужна первая запись
